@@ -1,0 +1,31 @@
+package com.packt.cardatabase;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import com.packt.cardatabase.service.UserDetailsServiceImpl;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+	private final UserDetailsServiceImpl userDetailsService;
+
+
+	public SecurityConfig(UserDetailsServiceImpl userDetailsService) {
+        this.userDetailsService = userDetailsService;
+    }
+
+Hinkula, Juha. Full Stack Development with Spring Boot 3 and React: Build modern web applications using the power of Java, React, and TypeScript (p. 166). Packt Publishing. Edição do Kindle. 
+
+	
+	@Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+	
+}

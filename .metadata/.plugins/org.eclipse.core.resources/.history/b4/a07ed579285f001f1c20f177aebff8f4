@@ -1,0 +1,15 @@
+package com.packt.cardatabase.domain;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Owner implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7395827198390470301L;
+
+}

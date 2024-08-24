@@ -1,0 +1,31 @@
+package com.packt.cardatabase.domain;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Owner implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7395827198390470301L;
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long ownerid;
+    private String firstname, lastname;
+    
+    public Owner() {
+    }
+    public Owner(String firstname, String lastname) {
+        super();
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+}

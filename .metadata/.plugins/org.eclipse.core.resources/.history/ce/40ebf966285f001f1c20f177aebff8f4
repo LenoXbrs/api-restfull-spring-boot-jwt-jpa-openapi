@@ -1,0 +1,10 @@
+package com.packt.cardatabase.domain;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Owner implements Serializable {
+
+}
